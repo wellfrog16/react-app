@@ -1,0 +1,17 @@
+@co: red;
+
+.function {
+    .rem(@x) {
+        @baseUnit: 75;
+        @unit: get-unit(@x);
+        @size: unit(@x);
+        @result: @size / @baseUnit;
+
+        return: e('@{result}rem');
+    }
+}
+
+.test {
+    color: @co;
+    font-size: rem(20px);
+}
