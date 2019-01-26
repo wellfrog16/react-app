@@ -100,6 +100,8 @@ module.exports = function(webpackEnv) {
               },
               stage: 3,
             }),
+            // rem 支持
+            require('postcss-px2rem')({ remUnit: 75, propWhiteList: [] })
           ],
           sourceMap: isEnvProduction && shouldUseSourceMap,
         },

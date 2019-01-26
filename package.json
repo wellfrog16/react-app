@@ -56,10 +56,20 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "fix": "eslint --fix src/*.jsx"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "airbnb",
+    "globals": {
+      "window": true,
+      "document": true,
+      "navigator": true
+    },
+    "rules": {
+      "indent": [2, 4],
+      "react/jsx-indent": [2, 4]
+    }
   },
   "browserslist": [
     ">0.2%",
@@ -114,8 +124,10 @@
     ]
   },
   "devDependencies": {
-    "less-plugin-functions": "^1.0.0",
+    "eslint-config-airbnb": "^17.1.0",
     "less": "^3.9.0",
-    "less-loader": "^4.1.0"
+    "less-loader": "^4.1.0",
+    "less-plugin-functions": "^1.0.0",
+    "postcss-px2rem": "^0.3.0"
   }
 }
