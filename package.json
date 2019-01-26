@@ -68,14 +68,8 @@
       "navigator": true
     },
     "rules": {
-      "indent": [
-        2,
-        4
-      ],
-      "react/jsx-indent": [
-        2,
-        4
-      ]
+      "indent": [2, 4],
+      "react/jsx-indent": [2, 4]
     }
   },
   "browserslist": [
