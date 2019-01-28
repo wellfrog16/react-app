@@ -43,6 +43,7 @@
     "react-app-polyfill": "^0.2.0",
     "react-dev-utils": "^7.0.1",
     "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.0",
@@ -59,18 +60,6 @@
     "test": "node scripts/test.js",
     "fix": "eslint --fix src/*.jsx",
     "fix2": "stylelint --fix src/*.css"
-  },
-  "eslintConfig": {
-    "extends": "airbnb",
-    "globals": {
-      "window": true,
-      "document": true,
-      "navigator": true
-    },
-    "rules": {
-      "indent": [2, 4],
-      "react/jsx-indent": [2, 4]
-    }
   },
   "browserslist": [
     ">0.2%",
