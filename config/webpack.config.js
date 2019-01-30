@@ -513,6 +513,14 @@ module.exports = function(webpackEnv) {
         },
       ],
     },
+    externals: {
+      jquery: 'jQuery',
+      echarts: 'echarts',
+      moment: 'moment',
+      lodash: '_',
+      axios: 'axios',
+      hammer: 'Hammer',
+    },
     plugins: [
       isEnvDevelopment && new StyleLintPlugin({
         context: 'src',
