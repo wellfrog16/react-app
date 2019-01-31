@@ -4,17 +4,17 @@ module.exports = {
         node: true,
     },
     extends: ['airbnb'],
+    // cdn 引用作为的全局对象
     globals: {
         'window': true,
         'document': true,
+        '$': true,
+        'echarts': true,
+        'moment': true,
+        'axios': true,
+        'Hammer': true,
+        '_': true,
     },
-    // settings: {
-    //     'import/resolver': {
-    //         webpack: {
-    //             config: './config/webpack.config.js',
-    //         },
-    //     },
-    // },
     rules: {
         indent: [2, 4], // 缩进风格
         'react/jsx-indent': [2, 4],

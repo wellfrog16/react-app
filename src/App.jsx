@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { _ } from './utils/cdn';
 
 class App extends React.Component {
     constructor(props) {
@@ -27,7 +28,7 @@ class App extends React.Component {
                 </div>
                 <ul>
                     {
-                        list.map(item => <li key={item}>{item}</li>)
+                        list.map(item => <li key={_.uniqueId()}>{item}</li>)
                     }
                 </ul>
             </div>
