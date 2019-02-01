@@ -1,34 +1,77 @@
 import React from 'react';
+import TodoItem from './item';
 import './App.css';
-import { _ } from './utils/cdn';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            id: 0,
             list: [],
+            info: '',
         };
     }
 
-    handleClick() {
-        const { list } = this.state;
+    save() {
+        let { id } = this.state;
+        const { list, info } = this.state;
+
+        if (info.length === 0) { return; }
+
+        id += 1;
         this.setState({
-            list: [...list, 'abc'],
+            id,
+            list: [...list, { id, info }],
+            info: '',
+        });
+    }
+
+    remove(id) {
+        const { list } = this.state;
+        const index = list.findIndex(item => item.id === id);
+        list.splice(index, 1);
+        this.setState({ list });
+    }
+
+    handleInputChange() {
+        this.setState({
+            info: this.input.value.trim(),
         });
     }
 
     render() {
-        const { list } = this.state;
+        const { list, info } = this.state;
         return (
             <div className="app">
                 <h3>TODO</h3>
                 <div>
-                    <input type="text" />
-                    <button type="button" onClick={() => { this.handleClick(); }}>提交</button>
+                    <input
+                        ref={(c) => { this.input = c; }}
+                        type="text"
+                        value={info}
+                        onChange={() => { this.handleInputChange(); }}
+                        onKeyDown={(e) => { e.keyCode === 13 && this.save(); }}
+                    />
+                    <button type="button" onClick={() => { this.save(); }}>提交</button>
                 </div>
                 <ul>
                     {
-                        list.map(item => <li key={_.uniqueId()}>{item}</li>)
+                        list.map(item => (
+                            <TodoItem
+                                key={item.id}
+                                info={item.info}
+                                handleRemove={() => { this.remove(item.id); }}
+                            />
+                            // <li key={item.id}>
+                            //     {item.info}
+                            //     <button
+                            //         type="button"
+                            //         onClick={() => { this.remove(item.id); }}
+                            //     >
+                            //         删除
+                            //     </button>
+                            // </li>
+                        ))
                     }
                 </ul>
             </div>

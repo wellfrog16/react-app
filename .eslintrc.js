@@ -18,6 +18,7 @@ module.exports = {
     rules: {
         indent: [2, 4], // 缩进风格
         'react/jsx-indent': [2, 4],
+        'react/jsx-indent-props': [2, 4],
         'max-len': [2, { 'code': 130 }],
         'global-require': 0, // 关闭require必须在顶部（懒加载组件用）
         'import/no-dynamic-require': 0, //关闭require格式校验（懒加载组件用）
