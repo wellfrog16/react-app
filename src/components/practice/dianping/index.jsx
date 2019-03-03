@@ -1,7 +1,9 @@
-import React from 'react';
+// import React from 'react';
+import React, { Component } from 'react';
+import { DatePicker } from 'antd'; // 加载 JS
 import TodoItem from './item';
 
-class Dianping extends React.Component {
+class Dianping extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -52,6 +54,7 @@ class Dianping extends React.Component {
                         onKeyDown={(e) => { e.keyCode === 13 && this.save(); }}
                     />
                     <button type="button" onClick={() => { this.save(); }}>提交</button>
+                    <DatePicker />
                 </div>
                 <ul>
                     {
