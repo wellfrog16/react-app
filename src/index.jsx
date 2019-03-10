@@ -4,7 +4,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import { LocaleProvider } from 'antd';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import { moment } from './utils/cdn';
-import './assets/style/main.less';
+import './assets/style/main.scss';
 // import Todo from './container/todo';
 // import Dianping from './container/dianping';
 import Home from './container/home';
