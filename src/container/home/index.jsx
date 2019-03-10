@@ -3,7 +3,7 @@ import { Layout, Icon } from 'antd';
 import XMenu from '../../components/common/XMenu';
 import CCC from '../../components/home/content';
 import menus from './menu';
-import style from './index.module.less';
+import style from './index.module.scss';
 
 const { Header, Sider, Content } = Layout;
 

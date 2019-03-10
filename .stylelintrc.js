@@ -1,6 +1,5 @@
 module.exports = {
-    // 'processors': ['@mapbox/stylelint-processor-arbitrary-tags'],
-    'extends': 'stylelint-config-standard',
+    'extends': 'stylelint-scss',
     'rules': {
         'indentation': 4, // 4个空格
         'no-empty-source': null,

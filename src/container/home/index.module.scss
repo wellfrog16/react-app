@@ -1,0 +1,44 @@
+.layout {
+    height: 100vh;
+}
+
+.logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px;
+}
+
+.sider {
+    overflow-y: auto;
+}
+
+.trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+        color: #1890ff;
+    }
+}
+
+.wrapper {
+    min-height: 300px;
+    height: 100%;
+    overflow-y: auto;
+    flex: auto;
+}
+
+.content {
+    margin: 24px 16px;
+    padding: 24px;
+    background-color: #fff;
+}
+
+.abc {
+    background-color: greenyellow;
+    width: 100px;
+    height: 2000px;
+}
